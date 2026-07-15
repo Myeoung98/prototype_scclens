@@ -37,15 +37,10 @@
   ::selection { background:var(--brand-ring); }
 
   /* ---------- shell ---------- */
-  .proto-banner {
-    background:linear-gradient(90deg, var(--brand) 0%, #FFA05C 100%); color:#fff;
-    font-size:12px; font-weight:600; letter-spacing:.02em;
-    padding:7px 16px; text-align:center; position:sticky; top:0; z-index:60;
-  }
-  .proto-banner b { font-weight:800; }
+  .proto-header-sticky { position:sticky; top:0; z-index:60; }
   .topbar {
     height:56px; background:var(--surface); border-bottom:1px solid var(--hairline);
-    display:flex; align-items:center; gap:14px; padding:0 18px; position:sticky; top:31px; z-index:50;
+    display:flex; align-items:center; gap:14px; padding:0 18px;
   }
   .brandmark { display:flex; align-items:center; gap:8px; flex-shrink:0; }
   .brandmark .box { width:28px; height:28px; border-radius:8px; background:var(--brand); color:var(--brand-fg);
@@ -217,21 +212,23 @@
 </style>
 
 
-<header class="topbar">
-  <div class="brandmark">
-    <div class="box">F</div>
-    <span class="name">SCC Lens</span>
-    <span class="sep">/ Prototype</span>
-  </div>
-  <div class="screen-tabs" role="tablist">
-    <button class="active" data-target="screen-overview"><span class="dot" style="background:#FFD9B3"></span>Tổng quan</button>
-    <button data-target="screen-analytics"><span class="dot" style="background:#A7C7E7"></span>Analytics</button>
-    <button data-target="screen-performance"><span class="dot" style="background:#A8D8C0"></span>Hiệu suất &amp; Traffic</button>
-  </div>
-  <div class="spacer"></div>
-  <span class="live-pill"><span class="blip"></span>Cập nhật realtime</span>
-  <div class="avatar">SL</div>
-</header>
+<div class="proto-header-sticky">
+  <header class="topbar">
+    <div class="brandmark">
+      <div class="box">F</div>
+      <span class="name">SCC Lens</span>
+      <span class="sep">/ Prototype</span>
+    </div>
+    <div class="screen-tabs" role="tablist">
+      <button class="active" data-target="screen-overview"><span class="dot" style="background:#FFD9B3"></span>Tổng quan</button>
+      <button data-target="screen-analytics"><span class="dot" style="background:#A7C7E7"></span>Analytics</button>
+      <button data-target="screen-performance"><span class="dot" style="background:#A8D8C0"></span>Hiệu suất &amp; Traffic</button>
+    </div>
+    <div class="spacer"></div>
+    <span class="live-pill"><span class="blip"></span>Cập nhật realtime</span>
+    <div class="avatar">SL</div>
+  </header>
+</div>
 
 <div class="app-body">
   <aside class="sidebar">
